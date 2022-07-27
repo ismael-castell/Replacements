@@ -1,1 +1,0 @@
-/** nrk.no - 618112c1d5dcb06e487079f2_6273d41593b9c915cd5c974f_20220505_134141 - Kilkaya as - copyright 2022 */

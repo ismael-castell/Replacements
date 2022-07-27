@@ -1,1 +1,0 @@
-/*!For license information please see mfga-color-slider.js.LICENSE.txt*/

@@ -1,1 +1,0 @@
-/*! License information is available at https://static.cdn.printful.com/dist-pf/553.licenses.txt for twemoji, lodash, portal-vue, vue-scrollto */

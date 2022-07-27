@@ -1,5 +1,0 @@
-
-/**
- * @constructor
- * @class GSAnalytics
- */

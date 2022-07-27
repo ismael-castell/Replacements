@@ -1,2 +1,0 @@
-// For license information, see `https://images-na.ssl-images-amazon.com/images/S/audible-seo-analytics-satellitescripts/launch-lib-files/5af1050356e3/c623be25d3a5/a8c00076e3e2/EX24dc9c746b924a5295f766ce8f169a18-libraryCode_source.js`.
-function(){}

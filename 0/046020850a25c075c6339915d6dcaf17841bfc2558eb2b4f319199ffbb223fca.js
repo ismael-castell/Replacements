@@ -1,3 +1,0 @@
-//	HYPE.documents["scroll"]
-
-(function(){})

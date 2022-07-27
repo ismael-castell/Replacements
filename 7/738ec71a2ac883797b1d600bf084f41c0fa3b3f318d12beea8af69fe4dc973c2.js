@@ -1,1 +1,0 @@
-/*!For license information please see mfga-forum.js.LICENSE.txt*/

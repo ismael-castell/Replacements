@@ -1,3 +1,0 @@
-/**
- * IOL Analytics site data
- */

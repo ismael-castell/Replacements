@@ -1,1 +1,0 @@
-/*!For license information please see mfga-chartjs.js.LICENSE.txt*/

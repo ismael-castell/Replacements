@@ -1,2 +1,0 @@
-/* adriver functions plugin */
-(function(){})

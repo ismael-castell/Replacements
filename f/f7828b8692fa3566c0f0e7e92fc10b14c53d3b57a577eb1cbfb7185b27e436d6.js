@@ -1,2 +1,0 @@
-// AdserverX
-(function(){})

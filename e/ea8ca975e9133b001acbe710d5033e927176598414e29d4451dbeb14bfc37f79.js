@@ -1,1 +1,0 @@
-/*!For license information please see mfga-longevity-sillage-slider.js.LICENSE.txt*/

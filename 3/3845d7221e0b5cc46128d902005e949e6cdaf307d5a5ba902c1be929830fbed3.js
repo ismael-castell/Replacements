@@ -1,4 +1,0 @@
-/* ------------------
-  should be global
-// */
-// google

@@ -1,2 +1,0 @@
-/* adriver pixel plugin */
-(function(){})

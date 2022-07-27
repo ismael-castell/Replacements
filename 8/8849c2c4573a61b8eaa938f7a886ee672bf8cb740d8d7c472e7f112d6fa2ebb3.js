@@ -1,2 +1,0 @@
-/* adriver event plugin */
-(function(){})

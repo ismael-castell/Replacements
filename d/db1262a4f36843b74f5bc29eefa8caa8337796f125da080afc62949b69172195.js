@@ -1,3 +1,0 @@
-<!-- Google Tag Manager -->
-
-(function(){})

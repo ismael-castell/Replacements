@@ -1,1 +1,0 @@
-/*!For license information please see mfga-perfumer-search.js.LICENSE.txt*/

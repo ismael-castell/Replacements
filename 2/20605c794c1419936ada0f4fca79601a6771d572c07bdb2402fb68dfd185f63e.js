@@ -1,1 +1,0 @@
-/*!For license information please see mfga-notes-search.js.LICENSE.txt*/

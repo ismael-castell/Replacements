@@ -1,4 +1,0 @@
-/**
- * gmedia Globals
- * @var GmediaGallery
- */

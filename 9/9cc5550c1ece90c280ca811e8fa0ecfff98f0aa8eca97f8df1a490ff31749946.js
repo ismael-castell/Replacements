@@ -1,2 +1,0 @@
-/* jshint worker:true */
-(function(){})

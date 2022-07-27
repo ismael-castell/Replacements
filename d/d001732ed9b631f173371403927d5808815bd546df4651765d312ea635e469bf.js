@@ -1,3 +1,0 @@
-/* 
- * Generates UUID v4
- */

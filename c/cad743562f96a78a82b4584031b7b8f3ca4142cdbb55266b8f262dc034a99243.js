@@ -1,1 +1,0 @@
-/*!For license information please see mfga-price-value-rating.js.LICENSE.txt*/

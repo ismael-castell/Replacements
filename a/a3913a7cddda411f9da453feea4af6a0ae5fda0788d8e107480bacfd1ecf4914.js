@@ -1,1 +1,0 @@
-/*!For license information please see mfga-member-shelves-draggable.js.LICENSE.txt*/

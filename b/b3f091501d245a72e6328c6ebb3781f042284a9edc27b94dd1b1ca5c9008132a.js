@@ -1,2 +1,0 @@
-/*** HP LIBERO SERVICE WORKER ***/
-
