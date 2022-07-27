@@ -1,0 +1,2 @@
+/* Files: ./static/js/src/onsugar.js (~64 KB) ./static/js/vendor/modernizr-2.7.1-micro.min.js (~3 KB) ./static/js/src/sugar-dispatcher-placeholder.js (~1 KB) ./themes/onsugar_themes/lightspeed/js/ot-tcf.js (~2 KB) ./themes/onsugar_themes/lightspeed/js/prebid.js (~246 KB) ./themes/onsugar_themes/lightspeed/js/sugar.ads.js (~3 KB) ./static/js/src/sugar.gpt.js (~22 KB) 
+Compiled in 0.075825929641724s for page: http://www.popsugar.co.uk/fashion/photo-gallery/3639516/image/3662917/Pearl-Earrings at Tue, 14 Jun 2022 18:47:31 +0100 host: sugarprodweb12.sugarops.com*/

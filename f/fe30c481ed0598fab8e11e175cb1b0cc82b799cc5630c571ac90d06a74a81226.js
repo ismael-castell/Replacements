@@ -1,0 +1,2 @@
+// For license information, see `https://apps.nhk.or.jp/assets/dtm/f085c0790456/8e1981ebf526/6382dd9c6b18/EX2bfe7fd4214d4a3d8034f0657b6bb1aa-libraryCode_source.js`.
+function(){}function(){}function(){}function(){}function(){}

@@ -1,0 +1,1 @@
+// proměnná pro sledování statistik 

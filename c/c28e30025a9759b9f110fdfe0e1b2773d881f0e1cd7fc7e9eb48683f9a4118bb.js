@@ -1,0 +1,2 @@
+/* flatpickr v4.6.9, @license MIT */
+!function(){}

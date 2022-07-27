@@ -1,0 +1,4 @@
+/* prebid.js v4.27.0
+Updated : 2022-06-16
+Modules: 33acrossBidAdapter, adyoulikeBidAdapter, aniviewBidAdapter, aolBidAdapter, appnexusBidAdapter, consentManagement, consentManagementUsp, conversantBidAdapter, criteoBidAdapter, gdprEnforcement, gridBidAdapter, gptPreAuction, gumgumBidAdapter, hiveBidAdapter, hiveRtdProvider, id5IdSystem, identityLinkIdSystem, ixBidAdapter, kargoBidAdapter, medianetBidAdapter, nativoBidAdapter, nobidBidAdapter, onetagBidAdapter, openwebBidAdapter, openxBidAdapter, pubCommonId, pubmaticBidAdapter, rhythmoneBidAdapter, rtdModule, rubiconBidAdapter, sharethroughBidAdapter, smartadserverBidAdapter, sonobiBidAdapter, sovrnBidAdapter, taboolaBidAdapter, teadsBidAdapter, tripleliftBidAdapter, undertoneBidAdapter, unifiedIdSystem, userId, yieldmoBidAdapter */
+!function(){}

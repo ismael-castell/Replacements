@@ -1,0 +1,1 @@
+// defines global uioGaCheck

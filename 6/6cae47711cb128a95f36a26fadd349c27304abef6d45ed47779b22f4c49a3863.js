@@ -1,0 +1,1 @@
+/*!For license information please see mfga-notes-rating-slider.js.LICENSE.txt*/

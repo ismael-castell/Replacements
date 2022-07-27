@@ -1,0 +1,1 @@
+/* KindEditor 4.1.10 (2013-11-23), Copyright (C) kindsoft.net, Licence: http://www.kindsoft.net/license.php */(function(){})

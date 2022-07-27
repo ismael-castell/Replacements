@@ -1,0 +1,1 @@
+function(){}BOOMR_start=(new Date).getTime(),BOOMR_check_doc_domain(),function(){}(window),function(){}

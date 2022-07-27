@@ -1,0 +1,1 @@
+/*! permutive-javascript-sdk v19.8.0 (web) (built 2022-05-11T11:09:34.705Z) */

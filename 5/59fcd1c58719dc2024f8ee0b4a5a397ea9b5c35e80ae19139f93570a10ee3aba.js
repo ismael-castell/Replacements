@@ -1,0 +1,5 @@
+﻿/*
+	External callbacks
+*/
+
+function(){}
