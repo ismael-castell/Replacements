@@ -1,0 +1,1 @@
+function(){}function isIframe(){try{return window.self!==window.top}catch(e){return!0}}function(){}function(){}

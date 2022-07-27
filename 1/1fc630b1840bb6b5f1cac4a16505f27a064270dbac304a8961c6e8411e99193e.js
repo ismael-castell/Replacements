@@ -1,0 +1,1 @@
+define(["underscore"],function(n){var o="search-history",c=function(e){if(!localStorage.getItem(o))return[];try{var r=JSON.parse(localStorage.getItem(o));return e&&!isNaN(e)&&(r=n.chain(r).sortBy(function(){}

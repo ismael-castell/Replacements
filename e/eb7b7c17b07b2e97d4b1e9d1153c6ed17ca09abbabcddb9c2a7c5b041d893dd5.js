@@ -1,0 +1,4 @@
+/**
+ * Sailthru Horizon
+ */
+(function(){})

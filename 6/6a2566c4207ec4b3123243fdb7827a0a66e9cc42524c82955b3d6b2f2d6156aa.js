@@ -1,0 +1,1 @@
+Vue.component('mds-price',{props:['price','decimals','pips','full','bold','commas'],computed:{showPips:function(){return 0!==this.pips},showBold:function(){return!1!==this.bold},showCommas:function(){return!0===this.commas},showMain:function(){}

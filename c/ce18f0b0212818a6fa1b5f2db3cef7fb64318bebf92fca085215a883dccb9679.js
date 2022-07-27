@@ -1,0 +1,8 @@
+(function($){"use strict";var $window=$(window);$window.on('load',function(){$window.trigger("resize");});$('.loader').fadeOut();$('.loader-mask').delay(350).fadeOut('slow');initOwlCarousel();setTimeout(function(){initFlickity();},1000);$window.on('resize',function(){hideSidenav();megaMenu();});var minWidth;if(Modernizr.mq('(min-width: 0px)')){minWidth=function(width){return Modernizr.mq('(min-width: '+width+'px)');};}
+else{minWidth=function(width){return $window.width()>=width;};}
+if(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent||navigator.vendor||window.opera)){$("html").addClass("mobile");$('.dropdown-toggle').attr('data-toggle','dropdown');}
+else{$("html").removeClass("mobile");}
+if(Function('/*@cc_on return document.documentMode===10@*/')()){$("html").addClass("ie");}
+$window.scroll(function(){scrollToTop();var $stickyNav=$('.nav--sticky');if($(window).scrollTop()>190){$stickyNav.addClass('sticky');}else{$stickyNav.removeClass('sticky');}
+if($(window).scrollTop()>200){$stickyNav.addClass('offset');}else{$stickyNav.removeClass('offset');}
+if($(window).scrollTop()>500){$stickyNav.addClass('scrolling');}else{$stickyNav.removeClass('scrolling');}});var $sidenav=$('#sidenav'),$mainContainer=$('#main-container'),$navIconToggle=$('.nav-icon-toggle'),$navHolder=$('.nav__holder'),$contentOverlay=$('.content-overlay'),$htmlContainer=$('html'),$sidenavCloseButton=$('#sidenav__close-button');$navIconToggle.on('click',function(e){e.stopPropagation();$(this).toggleClass('nav-icon-toggle--is-open');$sidenav.toggleClass('sidenav--is-open');$contentOverlay.toggleClass('content-overlay--is-visible');});function(){}

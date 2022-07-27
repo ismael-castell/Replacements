@@ -1,0 +1,3 @@
+﻿(function(){var formEl=$('#js-form');var inputEl=$('#js-form-input');var formGroupEl=$('#js-form-group');var submitEl=$('#js-form-submit');var successEl=$('#js-form-success');var errorEl=$('#js-form-error');function handleSubmit(e){e.preventDefault();formEl.addClass('was-submitted');errorEl.css('display','none');if(formEl.is(':valid')){var actionurl=formEl.attr('action');if(actionurl==='fake-success'){startLoading();window.setTimeout(handleSuccess,2000);}else if(actionurl==='fake-failure'){startLoading();window.setTimeout(handleFailure,2000);}else{$.ajax({url:actionurl,type:'post',dataType:'application/json',data:formEl.serialize(),beforeSend:startLoading,success:handleSuccess,error:handleFailure});}}}
+function handleInvalid(e){e.preventDefault();}
+function(){}

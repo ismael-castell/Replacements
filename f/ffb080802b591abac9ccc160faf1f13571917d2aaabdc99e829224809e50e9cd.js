@@ -1,0 +1,1 @@
+define("modules/common/gigyaLogin",["jquery","modules/helpers/gigyaHelper"],function(n,e){return function(){var o=function(n){return function(n){n&&(n.preventDefault(),n.stopPropagation()),e.login()}},t=function(){}

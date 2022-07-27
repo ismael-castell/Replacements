@@ -1,0 +1,2 @@
+// Static Queue Snippet
+!function(){}

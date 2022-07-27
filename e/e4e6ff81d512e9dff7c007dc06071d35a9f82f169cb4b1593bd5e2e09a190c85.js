@@ -1,0 +1,3 @@
+function ajaxGetPageAdInfo(b,c,d,a,e){var f=(new Date).getTime();$.ajax({type:"POST",url:"https://ad-dc.nownews.com/dc/adInfo",contentType:"application/json",data:JSON.stringify({topic:"adInfo",message:{device:b,cookieId:c,openId:"",deviceId:"",remoteIP:d,adKey:a,action:"load",viewTime:f,viewPath:e}}),success:function(g){}})}
+function ajaxGetClickAdInfo(b,c,d,a,e){var f=(new Date).getTime();e=e.text();$.ajax({type:"POST",url:"https://ad-dc.nownews.com/dc/adInfo",contentType:"application/json",data:JSON.stringify({topic:"adInfo",message:{device:b,cookieId:c,openId:"",deviceId:"",remoteIP:d,adKey:e,action:"chick",viewTime:f,viewPath:a}}),success:function(g){}})}
+function(){}

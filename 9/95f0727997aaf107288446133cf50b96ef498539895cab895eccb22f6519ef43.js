@@ -1,0 +1,16 @@
+/*
+* Version: 2.1.0.2 (EdgeX-GCE)
+* Build Date: 2017-03-07 10:48:29
+*
+* Copyright (c) 2010-2017 by BlueCava, Inc. ALL RIGHTS RESERVED.
+* This document contains CONFIDENTIAL, PROPRIETARY, PATENTABLE 
+* and/or TRADE SECRET information belonging to BlueCava, Inc. and may
+* not be reproduced or adapted, in whole or in part, without prior
+* written permission from BlueCava, Inc.
+*/
+window.bluecava=function(){P={encodeBase64:function(b,a){b||(b="");var e,f,d,c,h,k,g,x=[],s="";if(k="undefined"!=typeof a&&a?P.encodeUTF8(b):b,h=k.length%3,0<h)for(;3>h++;)s+="=",k+="\x00";for(h=0;h<k.length;h+=3)e=k.charCodeAt(h),f=k.charCodeAt(h+1),d=k.charCodeAt(h+2),c=e<<16|f<<8|d,e=c>>18&63,f=c>>12&63,d=c>>6&63,c&=63,x[h/3]="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(e)+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(f)+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(d)+
+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(c);return g=x.join(""),g.slice(0,g.length-s.length)+s},decodeBase64:function(b,a){b||(b="");a="undefined"!=typeof a&&a;var e,f,d,c,h,k,g,x=[];g=a?P.decodeUTF8(b):b;for(var s=0;s<g.length;s+=4)e="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".indexOf(g.charAt(s)),f="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".indexOf(g.charAt(s+1)),c="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".indexOf(g.charAt(s+
+2)),h="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".indexOf(g.charAt(s+3)),d=e<<18|f<<12|c<<6|h,e=d>>>16&255,f=d>>>8&255,d&=255,x[s/4]=String.fromCharCode(e,f,d),64==h&&(x[s/4]=String.fromCharCode(e,f)),64==c&&(x[s/4]=String.fromCharCode(e));return k=x.join(""),a?P.decodeUTF8(k):k},encodeUTF8:function(b){return b||(b=""),b=b.replace(/[\u0080-\u07ff]/g,function(a){a=a.charCodeAt(0);return String.fromCharCode(192|a>>6,128|63&a)}),b=b.replace(/[\u0800-\uffff]/g,function(a){a=a.charCodeAt(0);
+return String.fromCharCode(224|a>>12,128|a>>6&63,128|63&a)})},decodeUTF8:function(b){return b||(b=""),b=b.replace(/[\u00c0-\u00df][\u0080-\u00bf]/g,function(a){a=(31&a.charCodeAt(0))<<6|63&a.charCodeAt(1);return String.fromCharCode(a)}),b=b.replace(/[\u00e0-\u00ef][\u0080-\u00bf][\u0080-\u00bf]/g,function(a){a=(15&a.charCodeAt(0))<<12|(63&a.charCodeAt(1))<<6|63&a.charCodeAt(2);return String.fromCharCode(a)})},convertToHex:function(b){b||(b="");for(var a="",e="",f=0;f<b.length;f++)e=b.charCodeAt(f).toString(16),
+a+=1==e.length?"0"+e:e;return a},convertFromHex:function(b){b||(b="");for(var a="",e=0;e<b.length;e+=2)a+=String.fromCharCode(parseInt(b.substring(e,e+2),16));return a},stripLineFeeds:function(b){b||(b="");var a="";return a=b.replace(/\n/g,""),a.replace(/\r/g,"")},toByteArray:function(b){b||(b="");for(var a=[],e=0;e<b.length;e++)a[e]=b.charCodeAt(e);return a},fragment:function(b,a,e){if(b||(b=""),!a||a>=b.length)return b;e||(e="\n");for(var f="",d=0;d<b.length;d+=a)f+=b.substr(d,a)+e;return f},formatHex:function(b,
+a){b||(b="");a||(a=45);for(var e="",f=b.toLowerCase(),d=0;d<f.length;d+=2)e+=f.substr(d,2)+":";return this.fragment(e,a)},byteArray2String:function(b){for(var a="",e=0;e<b.length;e++)a+=String.fromCharCode(b[e]);return a}};var u={init:function(){}

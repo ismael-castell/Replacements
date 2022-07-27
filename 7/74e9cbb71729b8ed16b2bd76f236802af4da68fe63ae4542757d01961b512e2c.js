@@ -1,0 +1,2 @@
+/*! vTicker 1.12 http://richhollis.github.com/vticker/ | http://richhollis.github.com/vticker/license/ | based on Jubgits vTicker http://www.jugbit.com/jquery-vticker-vertical-news-ticker/ */
+(function(){})

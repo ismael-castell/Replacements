@@ -1,0 +1,2 @@
+/* adriver autoUpdate plugin */
+(function(){})

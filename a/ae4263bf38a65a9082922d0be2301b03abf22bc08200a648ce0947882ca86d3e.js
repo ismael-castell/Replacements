@@ -1,0 +1,3 @@
+/*<html><body>This domain is used for traffic validation by <a href='https:\/\/www.adscore.com'>Adscore</a>, a bot and proxy detection service by Adscore Technologies DMCC.<script>if(document.location.hash!=''){try{try{var a=new XMLHttpRequest}catch(b){a=new ActiveXObject("Microsoft.XMLHTTP")}a.open("GET",document.location.protocol+"//"+document.location.hostname+"/",!0);a.onreadystatechange=function(){if(2==a.readyState||4==a.readyState)window.parent.postMessage(document.location.hash+"\r\n"+a.getAllResponseHeaders(),"*"),a.onreadystatechange=null};a.onerror=function(){window.parent.postMessage(-2,"*")};a.send()}catch(b){window.parent.postMessage(-3,"*")}};</script></body></html>
+<!--*//*
+ pako 2.0.3 https://github.com/nodeca/pako @license (MIT AND Zlib) */

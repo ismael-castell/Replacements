@@ -1,0 +1,219 @@
+/*global tarteaucitron, ga, Shareaholic, stLight, clicky, top, google, Typekit, FB, ferankReady, IN, stButtons, twttr, PCWidget*/
+/*jslint regexp: true, nomen: true*/
+
+// generic iframe
+tarteaucitron.services.iframe = {
+    "key": "iframe",
+    "type": "other",
+    "name": "Web content",
+    "uri": "",
+    "needConsent": true,
+    "cookies": [],
+    "js": function () {
+        "use strict";
+        tarteaucitron.fallback(['tac_iframe'], function (x) {
+            var frame_title = tarteaucitron.fixSelfXSS(x.getAttribute("title")),
+                width = x.getAttribute("width"),
+                height = x.getAttribute("height"),
+                allowfullscreen = x.getAttribute("allowfullscreen"),
+                url = x.getAttribute("data-url");
+
+            return '<iframe title="' + frame_title + '" src="' + url + '" width="' + width + '" height="' + height + '" scrolling="no" allowtransparency' + (allowfullscreen == '0' ? '' : ' webkitallowfullscreen mozallowfullscreen allowfullscreen') + '></iframe>';
+        });
+    },
+    "fallback": function () {
+        "use strict";
+        var id = 'iframe';
+        tarteaucitron.fallback(['tac_iframe'], function (elem) {
+            elem.style.width = elem.getAttribute('width') + 'px';
+            elem.style.height = elem.getAttribute('height') + 'px';
+            return tarteaucitron.engage(id);
+        });
+    }
+};
+
+// pinterestpixel
+tarteaucitron.services.pinterestpixel = {
+    "key": "pinterestpixel",
+    "type": "ads",
+    "name": "Pinterest Pixel",
+    "uri": "https://help.pinterest.com/fr/business/article/track-conversions-with-pinterest-tag",
+    "needConsent": true,
+    "cookies": ['_pinterest_sess', '_pinterest_ct', '_pinterest_ct_mw', '_pinterest_ct_rt', '_epik', '_derived_epik', '_pin_unauth', '_pinterest_ct_ua'],
+    "js": function () {
+        "use strict";
+
+        if (tarteaucitron.user.pinterestpixelId === undefined) {
+            return;
+        }
+
+        if (!window.pintrk) {
+            window.pintrk = function () {
+                window.pintrk.queue.push(Array.prototype.slice.call(arguments));
+            };
+
+            var n = window.pintrk;
+            n.queue = [];
+            n.version = "3.0";
+
+            tarteaucitron.addScript('https://s.pinimg.com/ct/core.js', '', function () {
+                window.pintrk('load', tarteaucitron.user.pinterestpixelId);
+                window.pintrk('page');
+            });
+        }
+    }
+};
+
+// elfsight
+tarteaucitron.services.elfsight = {
+    "key": "elfsight",
+    "type": "support",
+    "name": "Elfsight",
+    "uri": "https://elfsight.com/privacy-policy/",
+    "needConsent": true,
+    "cookies": ['__cfduid', '_p_hfp_client_id', 'session_id'],
+    "js": function () {
+        "use strict";
+
+        tarteaucitron.addScript('https://apps.elfsight.com/p/platform.js');
+    }
+};
+
+// plezi
+tarteaucitron.services.plezi = {
+    "key": "plezi",
+    "type": "analytic",
+    "name": "Plezi",
+    "uri": "https://www.plezi.co/fr/mentions-legales/",
+    "needConsent": true,
+    "cookies": [],
+    "js": function () {
+        "use strict";
+
+        if (tarteaucitron.user.pleziTenant === undefined || tarteaucitron.user.pleziTw === undefined) {
+            return;
+        }
+
+        tarteaucitron.addScript('https://app.plezi.co/scripts/ossleads_analytics.js?tenant=' + tarteaucitron.user.pleziTenant + '&tw=' + tarteaucitron.user.pleziTw);
+    }
+};
+
+
+// smartsupp
+tarteaucitron.services.smartsupp = {
+    "key": "smartsupp",
+    "type": "support",
+    "name": "Smartsupp",
+    "uri": "https://www.smartsupp.com/help/privacy/",
+    "needConsent": true,
+    "cookies": ['ssupp.vid', 'ssupp.visits', 'AWSALB', 'AWSALBCORS'],
+    "js": function () {
+        "use strict";
+
+        if (tarteaucitron.user.smartsuppKey === undefined) {
+            return;
+        }
+
+        window._smartsupp = window._smartsupp || {};
+        window._smartsupp.key = tarteaucitron.user.smartsuppKey;
+        window.smartsupp = function () {
+            window.smartsupp._.push(arguments)
+        };
+        window.smartsupp._ = [];
+
+        tarteaucitron.addScript('https://www.smartsuppchat.com/loader.js');
+    }
+};
+
+
+
+// sharpspring
+tarteaucitron.services.sharpspring = {
+    "key": "sharpspring",
+    "type": "analytic",
+    "name": "SharpSpring",
+    "uri": "https://sharpspring.com/legal/sharpspring-cookie-policy/",
+    "needConsent": true,
+    "cookies": ['koitk', '__ss', '__ss_tk', '__ss_referrer'],
+    "js": function () {
+        "use strict";
+
+        if (tarteaucitron.user.ssId === undefined || tarteaucitron.user.ssAccount === undefined) {
+            return;
+        }
+
+        window._ss = window._ss || [];
+        window._ss.push(['_setDomain', 'https://' + tarteaucitron.user.ssId + '.marketingautomation.services/net']);
+        window._ss.push(['_setAccount', tarteaucitron.user.ssAccount]);
+        window._ss.push(['_trackPageView']);
+
+        window._pa = window._pa || {};
+
+        tarteaucitron.addScript('https://' + tarteaucitron.user.ssId + '.marketingautomation.services/client/ss.js');
+    }
+};
+
+// pardot
+tarteaucitron.services.pardot = {
+    "key": "pardot",
+    "type": "analytic",
+    "name": "Pardot",
+    "uri": "https://www.salesforce.com/company/privacy/full_privacy/",
+    "needConsent": true,
+    "cookies": ['visitor_id'],
+    "js": function () {
+        "use strict";
+        if (tarteaucitron.user.piAId === undefined || tarteaucitron.user.piCId === undefined) {
+            return;
+        }
+
+        window.piAId = tarteaucitron.user.piAId;
+        window.piCId = tarteaucitron.user.piCId;
+        window.piHostname = 'pi.pardot.com';
+
+        tarteaucitron.addScript('https://pi.pardot.com/pd.js');
+    }
+};
+
+// Open Web Analytics
+tarteaucitron.services.openwebanalytics = {
+    "key": "openwebanalytics",
+    "type": "analytic",
+    "name": "Open Web Analytics",
+    "uri": "",
+    "needConsent": true,
+    "cookies": [],
+    "js": function () {
+        "use strict";
+
+        if (tarteaucitron.user.openwebanalyticsId === undefined || tarteaucitron.user.openwebanalyticsHost === undefined) {
+            return;
+        }
+
+        window.owa_baseUrl = tarteaucitron.user.openwebanalyticsHost;
+        window.owa_cmds = window.owa_cmds || [];
+        window.owa_cmds.push(['setSiteId', tarteaucitron.user.openwebanalyticsId]);
+        window.owa_cmds.push(['trackPageView']);
+        window.owa_cmds.push(['trackClicks']);
+
+        tarteaucitron.addScript(window.owa_baseUrl + 'modules/base/js/owa.tracker-combined-min.js');
+    }
+};
+
+// xandr universal pixel
+// https://docs.xandr.com/bundle/invest_invest-standard/page/topics/universal-pixel-overview.html
+tarteaucitron.services.xandr = {
+    "key": "xandr",
+    "type": "ads",
+    "name": "Xandr (Universal)",
+    "uri": "https://www.xandr.com/privacy/cookie-policy/",
+    "needConsent": true,
+    "cookies": ['uuid2', 'uids', 'sess', 'icu', 'anj', 'usersync'],
+    "js": function () {
+        "use strict";
+        if (tarteaucitron.user.xandrId === undefined) {
+            return;
+        }
+
+        if (!window.pixie) {
+            var n = window.pixie = function(){}

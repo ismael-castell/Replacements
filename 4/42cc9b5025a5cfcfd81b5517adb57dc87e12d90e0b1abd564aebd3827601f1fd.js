@@ -1,0 +1,2 @@
+/* global fetch, ga */
+(function(){})
